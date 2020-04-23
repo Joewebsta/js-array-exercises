@@ -7,25 +7,19 @@ function subtract (a, b) {
 }
 
 function sum (array) {
-	let sum = 0;
-	array.forEach(element => {
-		sum += element;
-	});
-
-	return sum;
+	return array.reduce((total, current) => total + current, 0);
 }
 
 function multiply (array) {
-	let total = 1;
-	array.forEach(element => {
-		total *= element;
-	});
-
-	return total;
+	if ( array.length === 0) {
+		return 0;	
+	} else {
+		return array.reduce((accumulator, nextItem) => accumulator * nextItem);
+	} 
 }
 
 function power(base, exponent) {
-	return base ** exponent;
+	return Math.pow(base, exponent);
 }
 
 function factorial(num) {
